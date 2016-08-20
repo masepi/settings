@@ -39,12 +39,26 @@
  )
 
 ;;;;
+;; TABS
 
-(setq tab-width 4) ; or any other preferred value
-(defvaralias 'c-basic-offset 'tab-width)
-(defvaralias 'cperl-indent-level 'tab-width)
+(setq-default c-basic-offset 4)
 
-(setq-default indent-tabs-mode nil)
+;; make indentation commands use space only (never tab character)
+(setq-default indent-tabs-mode nil) ; emacs 23.1, 24.2, default to t
+;; set default tab char's display width to 4 spaces
+(setq-default tab-width 4) ; emacs 23.1, 24.2, default to 8
+
+;; set current buffer's tab char's display width to 4 spaces
+(setq tab-width 4)
+;; make tab key always call a indent command.
+(setq-default tab-always-indent t)
+
+;; make tab key call indent command or insert tab character, depending on cursor position
+(setq-default tab-always-indent nil)
+
+;; make tab key do indent first then completion.
+(setq-default tab-always-indent 'complete)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
