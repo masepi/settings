@@ -27,6 +27,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ensime/ensime-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,7 +41,6 @@ let g:solarized_termtrans=1
 syntax enable
 set background=dark
 colorscheme solarized
-set guifont=Meslo\ LG\ M\ 12
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
